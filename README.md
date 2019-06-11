@@ -12,7 +12,9 @@ Require
 Install
 --------
 
-TODO: 書く
+```
+fisher add nishi-yuki/gcd
+```
 
 Usage
 ------

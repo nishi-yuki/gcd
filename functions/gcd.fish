@@ -9,7 +9,7 @@ function gcd -a query -d "Change the current directory to repository's directory
         return 0
     end
 
-    set -l repo_name (string split " " "$backmsg" (ghq list) | peco --query "$query")
+    set -l repo_name (string split " " "$backmsg" (ghq list) | peco --query="$query")
     switch "$repo_name"
         case ""
             return 1

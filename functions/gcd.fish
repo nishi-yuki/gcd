@@ -1,5 +1,6 @@
 function gcd -a query -d "Change the current directory to repository's directory"
     set -l backmsg "(back)"
+    set -l prompt "select repo>"
     set -l ghq_root (ghq root)
 
     # when query = reponame
@@ -9,7 +10,7 @@ function gcd -a query -d "Change the current directory to repository's directory
         return 0
     end
 
-    set -l repo_name (string split " " "$backmsg" (ghq list) | peco --query="$query")
+    set -l repo_name (string split " " "$backmsg" (ghq list) | peco --query="$query" --prompt="$prompt")
     switch "$repo_name"
         case ""
             return 1

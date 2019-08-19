@@ -1,1 +1,1 @@
-complete -c gcd --no-files -a "(ghq list)"
+complete -c ghqcd --no-files -a "(ghq list)"

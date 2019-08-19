@@ -1,4 +1,4 @@
-function gcd -a query -d "Change the current directory to repository's directory"
+function ghqcd -a query -d "Change the current directory to repository's directory"
     set -l backmsg "(back)"
     set -l prompt "select repo>"
     set -l ghq_root (ghq root)
